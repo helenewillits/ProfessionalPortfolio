@@ -29,12 +29,12 @@ jobs:
           npm clean-install
           npm run build
         env:
-          VITE_BASE_URL: "${{steps.setup.outputs.base_url}}"
+          BASE_PATH: "/ProfessionalPortfolio/"
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: out
 
       - name: Deploy Pages
         uses: actions/deploy-pages@v4
