@@ -8,31 +8,34 @@ export default function Projects() {
       title: 'Alexa Plus',
       subtitle: 'Next-Gen Ambient AI',
       description: 'Pioneered agentic capabilities and platform integrations for Alexa Plus, the next generation of ambient AI. Alexa Plus is the first of its kind to use a model-agnostic architecture, dynamically orchestrating Anthropic, Amazon Nova, and other LLMs to execute multi-step actions across services like Uber, Ticketmaster, and Amazon Fresh. Shipped a partner skill integration, delivered an E2E test skill, built out calendar integrations, engineered a local testing proxy that saved ~60 developer hours/week, resolved critical bugs to ensure high availability for 300M users, and delivered CX for a large-scale Games campaign, supporting launch to 3M+ Alexa Plus users.',
-      image: 'https://readdy.ai/api/search-image?query=minimalist%20abstract%203d%20render%20of%20floating%20geometric%20shapes%20representing%20voice%20assistant%20ai%20with%20soft%20cyan%20glow%20ambient%20lighting%20on%20pure%20black%20background%20ultra%20clean%20modern%20aesthetic%20inspired%20by%20apple%20design%20language&width=1200&height=800&seq=alexa-apple1&orientation=landscape',
+      image: 'https://danimcasas.com/wp-content/uploads/2025/02/Alexa-la-evolucion-del-asistente-de-voz-de-Amazon-con-inteligencia-artificial-generativa-para-interacciones-mas-personalizadas-y-naturales-en-2025.png',
       tech: ['LLM Development', 'Java', 'Lambda', 'API Gateway'],
       role: 'SDE 1',
       impact: '3M+ users',
-      period: 'Jan 2025 - Jan 2026'
+      period: 'Jan 2025 - Jan 2026',
+      link: 'https://www.amazon.com/b?ie=UTF8&node=206207565011'
     },
     {
       title: 'Amazon Q',
       subtitle: 'Enterprise AI Assistant',
       description: 'Amazon Q Business leverages companies’ internal data and industry-leading LLM capabilities to provide tailored assistance, empowering teams to be more data-driven, creative, and productive. Used TypeScript, React, and REST APIs to integrate backend services within a 4.5-month timeline in a startup-like environment. This work is estimated to save enterprises $50k–$200k per year in labor costs and is estimated to have 100+ customers to date, including one Fortune 500 company onboarded at launch.',
-      image: 'https://readdy.ai/api/search-image?query=minimalist%20abstract%203d%20render%20of%20sleek%20floating%20code%20blocks%20and%20data%20streams%20with%20soft%20teal%20accent%20lighting%20on%20pure%20black%20background%20ultra%20clean%20modern%20aesthetic%20inspired%20by%20apple%20design%20language&width=1200&height=800&seq=amazonq-apple1&orientation=landscape',
+      image: 'https://assets.aboutamazon.com/dims4/default/3f368f7/2147483647/strip/false/crop/2000x1125+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F95%2Fbc%2Fb88478784cc19cf09c627968cc06%2Faa-apr2024-amazonq-standard-hero-v5-2000x1125-1.jpg',
       tech: ['TypeScript', 'React', 'REST APIs'],
       role: 'SDE 1',
       impact: '100+ enterprise customers',
-      period: 'June 2024 - Jan 2025'
+      period: 'June 2024 - Jan 2025',
+      link: 'https://aws.amazon.com/q/'
     },
     {
       title: 'CodeCatalyst',
       subtitle: 'Developer Tools',
       description: 'Designed and implemented a code coverage feature for developer tools using TypeScript, Lambda, S3, and EC2.',
-      image: 'https://readdy.ai/api/search-image?query=minimalist%20abstract%203d%20render%20of%20interconnected%20nodes%20and%20neural%20pathways%20with%20soft%20purple%20cyan%20gradient%20glow%20on%20pure%20black%20background%20ultra%20clean%20modern%20aesthetic%20inspired%20by%20apple%20design%20language&width=1200&height=800&seq=codecat-apple1&orientation=landscape',
+      image: 'https://miro.medium.com/v2/resize:fit:1400/1*gt5UWzFHTv7_eW_aQz2HWA.png',
       tech: ['CDK', 'TypeScript', 'Lambda', 'S3', 'EC2'],
       role: 'SDE Intern',
       impact: '10k+ developers',
-      period: 'Summer 2022'
+      period: 'Summer 2022',
+      link: 'https://codecatalyst.aws/'
     },
     {
       title: 'Amazon Lex',
@@ -42,7 +45,8 @@ export default function Projects() {
       tech: ['NLP', 'Python', 'S3'],
       role: 'SDE Intern',
       impact: '200+ developer hours/week',
-      period: 'Summer 2021'
+      period: 'Summer 2021',
+      link: 'https://aws.amazon.com/lex/'
     }
   ];
 
@@ -177,10 +181,15 @@ export default function Projects() {
                     </div>
 
                     {/* View Details Button */}
-                    <button className="flex items-center gap-1.5 md:gap-2 px-4 md:px-6 py-2 md:py-3 bg-cyan-500/10 hover:bg-cyan-500/20 rounded-full transition-colors cursor-pointer group/btn whitespace-nowrap">
+                    <a 
+                      href={projects[activeIndex].link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 md:gap-2 px-4 md:px-6 py-2 md:py-3 bg-cyan-500/10 hover:bg-cyan-500/20 rounded-full transition-colors cursor-pointer group/btn whitespace-nowrap"
+                    >
                       <span className="text-[10px] md:text-base font-medium text-cyan-400">View Details</span>
                       <i className="ri-arrow-right-line text-cyan-400 text-xs md:text-base transition-transform group-hover/btn:translate-x-0.5"></i>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
